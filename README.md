@@ -1,2 +1,2 @@
 # api-client
-Basic Trait to use in with Guzzle
+Basic Trait to use with Guzzle
