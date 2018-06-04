@@ -1,0 +1,18 @@
+{
+    "name": "burongtz/trait-api-client",
+    "type": "library",
+    "keywords": ["client", "HTTP client"],
+    "description": "Useful trait to api connection.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javier Burón Gutiérrez",
+            "email": "javier@burongtz.com",
+            "homepage": "https://github.com/burongtz"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
