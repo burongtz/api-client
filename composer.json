@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "burongtz\\": "src/"
+            "BuronGtz\\TraitApiClient\\": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace burongtz\TraitApiClient;
+namespace BuronGtz\TraitApiClient;
 
 use Illuminate\Contracts\Session\Session;
 use \GuzzleHttp\Client;
