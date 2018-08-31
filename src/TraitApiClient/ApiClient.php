@@ -18,7 +18,7 @@ trait ApiClient
     {
         if (!isset($this->client)) {
             $this->client = new Client([
-                'base_uri' => env('API_URL'),
+                'base_uri' => config('app.api_ur'),
                 'http_errors' => false,
                 'timeout' => 0 // TODO: Fix this timeout to 2.0 or same
             ]);
@@ -52,8 +52,8 @@ trait ApiClient
         session()->put('oauth_token', null);
         $formParams = [
             'grant_type' => isset($options['data']['form_params']['grant_type']) ? $options['data']['form_params']['grant_type'] : 'client_credentials',
-            'client_id' => env('API_CLIENT_ID'),
-            'client_secret' => env('API_CLIENT_SECRET'),
+            'client_id' => config('app.api_client_id'),
+            'client_secret' => config('app.api_client_secret'),
         ];
         if (isset($options['data']['form_params']['username'])) {
             $formParams['username'] = $options['data']['form_params']['username'];
@@ -62,7 +62,7 @@ trait ApiClient
             $formParams['password'] = $options['data']['form_params']['password'];
         }
         $options = [
-            'url' => isset($options['url']) ? $options['url'] :  env('API_URL_TOKEN'),
+            'url' => isset($options['url']) ? $options['url'] :  config('app.api_url_token'),
             'method' => 'POST',
             'data' => [
                 'form_params' => $formParams
